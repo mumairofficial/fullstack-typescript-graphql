@@ -1,12 +1,13 @@
 import express from 'express';
-import bodyParser from 'body-parser';
+import { ApolloServer } from 'apollo-server-express';
+
+import { schema } from './graphql';
 
 const app = express();
-const port = 9000;
+const port = 9001;
 
-app.use(bodyParser.json());
-
-app.get('/', (_req, res) => res.send('hello world'));
+const apolloServer = new ApolloServer({ schema });
+apolloServer.applyMiddleware({ app, path: '/api' });
 
 app.listen(port, () => {
   console.log(`[🚀]: http://localhost:${port}`);
