@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "target": "ES6",
+    "module": "commonjs",
+    "rootDir": "src",
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "strict": true,
+    "paths": {
+      "@entities/*": ["src/entities/*"]
+    }
+  }
+}
