@@ -6,7 +6,8 @@
   "author": "mumair<mumairofficial@gmail.com>",
   "license": "GPLv3",
   "scripts": {
-    "build": "tsc",
+    "start": "nodemon src/index.ts",
+    "build": "tsc -p ./",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|ts|json)\"",
     "format": "npm run prettier -- --write",
@@ -14,6 +15,7 @@
     "validate": "npm-run-all --parallel check-format lint build"
   },
   "dependencies": {
+    "body-parser": "^1.19.0",
     "express": "^4.17.1"
   },
   "devDependencies": {
