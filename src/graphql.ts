@@ -11,8 +11,6 @@ import {
 
 import { Listing, listings } from './listing';
 
-
-
 const Listing = new GraphQLObjectType({
   name: 'Listing',
   fields: {
@@ -25,11 +23,8 @@ const Listing = new GraphQLObjectType({
     numOfBeds: { type: GraphQLNonNull(GraphQLInt) },
     numOfBaths: { type: GraphQLNonNull(GraphQLInt) },
     rating: { type: GraphQLNonNull(GraphQLFloat) },
-  }
+  },
 });
-
-
-
 
 const query = new GraphQLObjectType({
   name: 'Query',
