@@ -7,7 +7,7 @@ module.exports = {
     ecmaVersion: 2019,
     sourceType: 'module',
   },
-  // rules: {},
+  rules: {},
   overrides: [
     {
       files: '**/*.+(ts|tsx)',
@@ -21,6 +21,9 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'eslint-config-prettier/@typescript-eslint',
       ],
+      rules: {
+        '@typescript-eslint/explicit-function-return-type': 'off',
+      },
     },
   ],
 };
