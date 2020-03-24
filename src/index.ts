@@ -1,7 +1,13 @@
-const age = 19;
+import express from 'express';
+import bodyParser from 'body-parser';
 
-function add(num1: number, num2: number): number {
-  return num1 + num2;
-}
+const app = express();
+const port = 9000;
 
-console.log(add(age, 12));
+app.use(bodyParser.json());
+
+app.get('/', (_req, res) => res.send('hello world'));
+
+app.listen(port, () => {
+  console.log(`[🚀]: http://localhost:${port}`);
+});
