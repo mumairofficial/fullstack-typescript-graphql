@@ -8,6 +8,7 @@
   "scripts": {
     "start": "nodemon src/index.ts",
     "build": "tsc -p ./",
+    "seed": "ts-node temp/seed.ts",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts .",
     "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|ts|json)\"",
     "format": "npm run prettier -- --write",
